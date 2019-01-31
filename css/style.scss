@@ -1,0 +1,21 @@
+@import './partials/setup';
+@import './partials/base';
+
+@import './partials/header';
+@import './partials/visit';
+@import './partials/carousel';
+@import './partials/sellingPoints';
+@import './partials/planAhead';
+@import './partials/freeTrip';
+@import './partials/footer';
+
+
+// How to create partials
+//       1. Create your partial file and don't save.
+//       2. Go to main scss file and import your new partial
+//       3. Save your main scss file
+
+//    How to fix your partials 
+//        1. Look for rogue partial .css files. Delete it
+//        2. Import your partial .scss in your main scss file
+//        3. Save your main scss file
