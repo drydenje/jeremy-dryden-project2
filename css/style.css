@@ -131,3 +131,147 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 125%;
+  line-height: 1.6rem;
+  letter-spacing: 0.1rem; }
+
+h1 {
+  font-family: "Playfair Display SC", serif;
+  font-weight: 900;
+  font-size: 5.55rem; }
+
+h2 {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 4.35rem;
+  line-height: 2.9rem;
+  letter-spacing: 0.45rem; }
+
+h3 {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 3.1rem;
+  line-height: 2.9rem;
+  letter-spacing: 0.335rem; }
+
+h4 {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 1.75rem;
+  line-height: 2.9rem;
+  letter-spacing: 0.19rem; }
+
+h5 {
+  font-family: "Playfair Display SC", serif;
+  font-weight: 900;
+  font-size: 1.73rem;
+  text-align: center;
+  color: #50e3c2;
+  margin: 1rem 0; }
+
+h6 {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2.9rem;
+  letter-spacing: 0.16rem; }
+
+button {
+  font-family: "Playfair Display SC", serif;
+  font-weight: 900;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.6rem;
+  letter-spacing: 0.05rem; }
+
+nav a {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.45rem;
+  letter-spacing: 0.05rem;
+  color: #fafffe;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin: 0 1rem; }
+
+form::-webkit-input-placeholder {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.6rem;
+  letter-spacing: 0.1rem; }
+
+form:-ms-input-placeholder {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.6rem;
+  letter-spacing: 0.1rem; }
+
+form::-ms-input-placeholder {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.6rem;
+  letter-spacing: 0.1rem; }
+
+form::placeholder {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.6rem;
+  letter-spacing: 0.1rem; }
+
+.wrapper {
+  margin: 0 10%;
+  max-width: 1600px; }
+
+header {
+  border: 1px solid blue;
+  width: 100%;
+  height: 90vh;
+  background-image: url("../assets/homeImage1.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+header .navBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-item-align: start;
+  align-self: flex-start; }
+
+header ul {
+  margin: 1rem 0;
+  padding: 0; }
+
+header li {
+  list-style-type: none;
+  display: inline-block; }

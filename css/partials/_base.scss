@@ -1,0 +1,119 @@
+// Colours
+$black: #2c2c2c;
+$darkSkyBlue: #4a90e2;
+$greenishCyan: #50e3c2;
+$iceBlue: #fafffe;
+$lightLightBlue: #d2f9f1;
+$spruce: #0c5f4c;
+$twilightBlue: #063974;
+
+$fontSerif: 'Playfair Display SC', serif;
+$fontSansSerif: 'Lato', sans-serif;
+
+$fontWeightLight: 300;
+$fontWeightRegular: 400;
+$fontWeightBold: 700;
+$fontWeightBlackItalic: 900;
+
+// Set some base numbers
+body {
+   font-family: $fontSansSerif;
+   font-weight: $fontWeightRegular;
+   font-size: 125%;
+   line-height: 1.6rem;
+   letter-spacing: 0.1rem;
+}
+
+
+// Beachstay
+h1 {
+   font-family: $fontSerif;
+   font-weight: $fontWeightBlackItalic;
+   font-size: 5.55rem;
+}
+
+// Blog, Get in touch
+h2 {
+   font-family: $fontSansSerif;
+   font-weight: $fontWeightBold;
+   font-size: 4.35rem;
+   line-height: 2.9rem;
+   letter-spacing: 0.45rem;
+}
+
+// welcome to..
+h3 {
+   font-family: $fontSansSerif;
+   font-weight: $fontWeightBold;
+   font-size: 3.1rem;
+   line-height: 2.9rem;
+   letter-spacing: 0.335rem;
+}
+
+// visit guyana, plan ahead, new location, free trip
+h4 {
+   font-family: $fontSansSerif;
+   font-weight: $fontWeightBold;
+   font-size: 1.75rem;
+   line-height: 2.9rem;
+   letter-spacing: 0.19rem;
+}
+
+// logo (beachstay small)
+h5 {
+   font-family: $fontSerif;
+   font-weight: $fontWeightBlackItalic;
+   font-size: 1.73rem;
+
+   text-align: center;
+   color: $greenishCyan;
+   margin: 1rem 0;
+}
+
+// beach house, blog, community
+h6 {
+   font-family: $fontSansSerif;
+   font-weight: $fontWeightBold;
+   font-size: 1.5rem;
+   line-height: 2.9rem;
+   letter-spacing: 0.16rem;
+}
+
+// buttons
+button {
+   font-family: $fontSerif;
+   font-weight: $fontWeightBlackItalic;
+   font-size: 1rem;
+   text-align: center;
+   line-height: 1.6rem;
+   letter-spacing: 0.05rem;
+}
+
+// nav links
+nav a {
+   font-family: $fontSansSerif;
+   font-weight: $fontWeightBold;
+   font-size: 1rem;
+   text-align: center;
+   line-height: 1.45rem;
+   letter-spacing: 0.05rem;
+
+   color: $iceBlue;
+   text-decoration: none;
+   text-transform: uppercase;
+   margin: 0 1rem;
+}
+
+// form placeholder (name, email)
+form::placeholder {
+   font-family: $fontSansSerif;
+   font-weight: $fontWeightLight;
+   font-size: 1rem;
+   line-height: 1.6rem;
+   letter-spacing: 0.1rem;
+}
+
+.wrapper {
+   margin: 0 10%;
+   max-width: 1600px;
+}
