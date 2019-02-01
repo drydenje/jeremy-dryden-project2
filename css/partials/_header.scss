@@ -34,6 +34,10 @@ header .navBar {
    align-self: flex-start;
 }
 
+.navBar li:last-child a {
+   margin-right: 0;
+}
+
 header ul {
    margin: 1rem 0;
    padding: 0;
