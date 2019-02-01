@@ -132,10 +132,13 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+html {
+  font-size: 125%; }
+
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: 125%;
+  font-size: 1rem;
   line-height: 1.6rem;
   letter-spacing: 0.1rem; }
 
@@ -149,7 +152,8 @@ h2 {
   font-weight: 700;
   font-size: 4.35rem;
   line-height: 2.9rem;
-  letter-spacing: 0.45rem; }
+  letter-spacing: 0.45rem;
+  color: #ffffff; }
 
 h3 {
   font-family: "Lato", sans-serif;
@@ -180,13 +184,22 @@ h6 {
   line-height: 2.9rem;
   letter-spacing: 0.16rem; }
 
-button {
+.button {
   font-family: "Playfair Display SC", serif;
   font-weight: 900;
   font-size: 1rem;
   text-align: center;
   line-height: 1.6rem;
-  letter-spacing: 0.05rem; }
+  letter-spacing: 0.05rem;
+  display: inline-block;
+  width: 21rem;
+  height: 5rem;
+  color: #ffffff;
+  background: #063974;
+  text-decoration: none; }
+
+a {
+  color: #2c2c2c; }
 
 nav a {
   font-family: "Lato", sans-serif;
@@ -200,59 +213,63 @@ nav a {
   text-transform: uppercase;
   margin: 0 1rem; }
 
-form::-webkit-input-placeholder {
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   font-family: "Lato", sans-serif;
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.6rem;
-  letter-spacing: 0.1rem; }
+  letter-spacing: 0.1rem;
+  background: red; }
 
-form:-ms-input-placeholder {
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   font-family: "Lato", sans-serif;
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.6rem;
-  letter-spacing: 0.1rem; }
+  letter-spacing: 0.1rem;
+  background: red; }
 
-form::-ms-input-placeholder {
+input::-ms-input-placeholder, textarea::-ms-input-placeholder {
   font-family: "Lato", sans-serif;
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.6rem;
-  letter-spacing: 0.1rem; }
+  letter-spacing: 0.1rem;
+  background: red; }
 
-form::placeholder {
+input::placeholder, textarea::placeholder {
   font-family: "Lato", sans-serif;
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.6rem;
-  letter-spacing: 0.1rem; }
+  letter-spacing: 0.1rem;
+  background: red; }
 
 .wrapper {
   margin: 0 10%;
   max-width: 1600px; }
 
+.currentPage {
+  color: #50e3c2; }
+
 header {
-  border: 1px solid blue;
   width: 100%;
   height: 90vh;
-  background-image: url("../assets/homeImage1.jpg");
   background-repeat: no-repeat;
-  background-size: contain;
-  padding: 1px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
+  background-size: cover;
+  background-position: center;
+  padding: 1px; }
+
+header.index {
+  background-image: url("../assets/homeImage1.jpg"); }
+
+header.contact {
+  height: 35vw;
+  background-image: url("../assets/contactImage1.jpg"); }
+
+header.blogPost {
+  height: 35vw;
+  background-image: url("../assets/blogImage1.jpg"); }
 
 header .navBar {
   display: -webkit-box;
@@ -275,3 +292,80 @@ header ul {
 header li {
   list-style-type: none;
   display: inline-block; }
+
+.carousel {
+  background: #d2f9f1; }
+
+.carousel .wrapper {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.carousel img {
+  width: 30%;
+  margin: 0 1%; }
+
+footer {
+  background: #2c2c2c; }
+
+footer p {
+  margin: 0 auto;
+  text-align: center;
+  color: #ffffff; }
+
+main.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 2rem; }
+
+.contactForm {
+  width: 60%;
+  padding: 2rem; }
+
+.contactForm form {
+  display: inline-block;
+  width: 100%; }
+  .contactForm form input.name, .contactForm form input.email {
+    width: calc(50% - 4px); }
+  .contactForm form textarea {
+    width: 100%; }
+  .contactForm form button {
+    width: 100%; }
+
+.contactInfo {
+  margin: auto; }
+  .contactInfo ul.socialMediaIcons {
+    list-style-type: none;
+    padding: 0; }
+    .contactInfo ul.socialMediaIcons li {
+      margin-right: 1rem;
+      display: inline-block; }
+  .contactInfo a {
+    text-decoration: none;
+    font-weight: 700; }
+  .contactInfo ul.mailingAddress {
+    list-style-type: none;
+    padding: 0; }
+
+.shadow {
+  -webkit-box-shadow: 0 15px 15px 0 #50e3c2;
+  box-shadow: 0 15px 15px 0 #50e3c2; }

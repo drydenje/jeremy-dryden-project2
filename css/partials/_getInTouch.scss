@@ -1,0 +1,56 @@
+main.contact {
+   // border: 1px dashed blue;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   margin: 2rem;
+}
+
+.contactForm {
+   width: 60%;
+   padding: 2rem;
+}
+
+.contactForm form {
+   display: inline-block;
+   width: 100%;
+
+   input.name, input.email {
+      width: calc(50% - 4px);
+   }
+
+   textarea {
+      width: 100%;
+   }
+
+   button {
+      width: 100%;
+   }
+}
+
+.contactInfo {
+   margin: auto;
+   ul.socialMediaIcons {
+      list-style-type: none;
+      padding: 0;
+      
+      li {
+         margin-right: 1rem;
+         display: inline-block;
+      }
+   }
+
+   a {
+      text-decoration: none;
+      font-weight: $fontWeightBold;
+   }
+
+   ul.mailingAddress {
+      list-style-type: none;
+      padding: 0;
+   }
+}
+
+.shadow {
+   box-shadow: 0 15px 15px 0 $greenishCyan;
+}

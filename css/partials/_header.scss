@@ -1,19 +1,30 @@
 header {
-   border: 1px solid blue;
+   // border: 1px solid blue;
    width: 100%;
    height: 90vh;
 
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   
+   padding: 1px;
+}
+
+header.index {
    background-image: 
       url('../assets/homeImage1.jpg');
-   background-repeat: no-repeat;
-   background-size: contain;
-   // background-position: 33% 50%;
-   padding: 1px;
+}
 
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-   align-items:center;
+header.contact {
+   height: 35vw;
+   background-image: 
+      url('../assets/contactImage1.jpg');
+}
+
+header.blogPost {
+   height: 35vw;
+   background-image: 
+      url('../assets/blogImage1.jpg');
 }
 
 header .navBar {
