@@ -184,18 +184,25 @@ h6 {
   line-height: 2.9rem;
   letter-spacing: 0.16rem; }
 
-.button {
+.button, button {
   font-family: "Playfair Display SC", serif;
   font-weight: 900;
   font-size: 1rem;
   text-align: center;
   line-height: 1.6rem;
   letter-spacing: 0.05rem;
+  color: #ffffff;
+  background: #063974; }
+
+button {
+  border: 0;
+  height: 3rem;
+  margin: 2rem 0 1rem 0; }
+
+.button {
   display: inline-block;
   width: 21rem;
   height: 5rem;
-  color: #ffffff;
-  background: #063974;
   text-decoration: none; }
 
 a {
@@ -218,39 +225,39 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.6rem;
-  letter-spacing: 0.1rem;
-  background: red; }
+  letter-spacing: 0.1rem; }
 
 input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   font-family: "Lato", sans-serif;
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.6rem;
-  letter-spacing: 0.1rem;
-  background: red; }
+  letter-spacing: 0.1rem; }
 
 input::-ms-input-placeholder, textarea::-ms-input-placeholder {
   font-family: "Lato", sans-serif;
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.6rem;
-  letter-spacing: 0.1rem;
-  background: red; }
+  letter-spacing: 0.1rem; }
 
 input::placeholder, textarea::placeholder {
   font-family: "Lato", sans-serif;
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.6rem;
-  letter-spacing: 0.1rem;
-  background: red; }
+  letter-spacing: 0.1rem; }
 
 .wrapper {
-  margin: 0 10%;
+  margin: 0 auto;
   max-width: 1600px; }
 
 .currentPage {
   color: #50e3c2; }
+
+.shadow {
+  -webkit-box-shadow: 1rem 1rem 0 0px #50e3c2;
+  box-shadow: 1rem 1rem 0 0px #50e3c2; }
 
 header {
   width: 100%;
@@ -335,7 +342,7 @@ main.contact {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin: 2rem; }
+  margin-bottom: 6rem; }
 
 .contactForm {
   width: 60%;
@@ -345,9 +352,22 @@ main.contact {
   display: inline-block;
   width: 100%; }
   .contactForm form input.name, .contactForm form input.email {
-    width: calc(50% - 4px); }
+    width: calc(50% - 4px);
+    margin: 1rem 0;
+    border: 1px solid #50e3c2;
+    line-height: 3rem;
+    border-width: 0 0 0.1rem 0; }
+    .contactForm form input.name:focus, .contactForm form input.email:focus {
+      border: 0.2rem solid #063974;
+      border-width: 0 0 0.1rem 0; }
   .contactForm form textarea {
-    width: 100%; }
+    width: 100%;
+    margin: 1rem 0;
+    border: 1px solid #50e3c2;
+    resize: none;
+    overflow: auto; }
+    .contactForm form textarea:focus {
+      border: 0.1rem solid #063974; }
   .contactForm form button {
     width: 100%; }
 
@@ -365,7 +385,3 @@ main.contact {
   .contactInfo ul.mailingAddress {
     list-style-type: none;
     padding: 0; }
-
-.shadow {
-  -webkit-box-shadow: 0 15px 15px 0 #50e3c2;
-  box-shadow: 0 15px 15px 0 #50e3c2; }

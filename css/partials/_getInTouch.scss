@@ -3,7 +3,8 @@ main.contact {
    display: flex;
    flex-direction: row;
    justify-content: center;
-   margin: 2rem;
+   // margin: 2rem;
+   margin-bottom: 6rem;
 }
 
 .contactForm {
@@ -17,10 +18,25 @@ main.contact {
 
    input.name, input.email {
       width: calc(50% - 4px);
+      margin: 1rem 0;
+      border: 1px solid #50e3c2;
+      line-height: 3rem;
+      border-width: 0 0 0.1rem 0;
+      &:focus {
+         border: 0.2rem solid $twilightBlue;
+         border-width: 0 0 0.1rem 0;
+      }
    }
 
    textarea {
       width: 100%;
+      margin: 1rem 0;
+      border: 1px solid #50e3c2;
+      resize: none;
+      overflow: auto;
+      &:focus {
+         border: 0.1rem solid $twilightBlue;
+      }
    }
 
    button {
@@ -49,8 +65,4 @@ main.contact {
       list-style-type: none;
       padding: 0;
    }
-}
-
-.shadow {
-   box-shadow: 0 15px 15px 0 $greenishCyan;
 }
