@@ -1,0 +1,67 @@
+aside.blogPost {
+   // todo: just for testing, change later
+   width: 400px;
+   border: 1px solid blue;
+
+   img {
+      width: 100%;
+   }
+
+   p {
+      margin-bottom: 0;
+   }
+
+   a {
+      text-decoration: none;
+   }
+
+   h6 {
+      margin: 0.5rem 0;
+      color: $twilightBlue;
+   }
+
+   ul {
+      margin: 0;
+   }
+   
+   li {
+      padding-left: 0.5rem;
+      color: $greenishCyan;
+      a {
+         text-decoration: none;
+      }
+   }
+}
+
+section.comments {
+   a {
+      text-decoration: none;
+      color: $twilightBlue;
+   }
+   
+   .postDate {
+      color: $twilightBlue;
+      font-weight: bold;
+   }
+
+   ul * {
+      border: 1px solid blue;
+   }
+   
+   ul {
+      list-style: none;
+   }
+
+   li figure {
+      display: flex;
+
+      img {
+         flex-shrink: 0;
+         max-height: 
+      }
+
+      figcaption {
+         flex-shrink: 2;
+      }
+   }
+}

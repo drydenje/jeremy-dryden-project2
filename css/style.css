@@ -388,3 +388,48 @@ main.contact {
   .contactInfo ul.mailingAddress {
     list-style-type: none;
     padding: 0; }
+
+aside.blogPost {
+  width: 400px;
+  border: 1px solid blue; }
+  aside.blogPost img {
+    width: 100%; }
+  aside.blogPost p {
+    margin-bottom: 0; }
+  aside.blogPost a {
+    text-decoration: none; }
+  aside.blogPost h6 {
+    margin: 0.5rem 0;
+    color: #063974; }
+  aside.blogPost ul {
+    margin: 0; }
+  aside.blogPost li {
+    padding-left: 0.5rem;
+    color: #50e3c2; }
+    aside.blogPost li a {
+      text-decoration: none; }
+
+section.comments a {
+  text-decoration: none;
+  color: #063974; }
+
+section.comments .postDate {
+  color: #063974;
+  font-weight: bold; }
+
+section.comments ul * {
+  border: 1px solid blue; }
+
+section.comments ul {
+  list-style: none; }
+
+section.comments li figure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  section.comments li figure img {
+    -ms-flex-negative: 0;
+    flex-shrink: 0; }
+  section.comments li figure figcaption {
+    -ms-flex-negative: 2;
+    flex-shrink: 2; }
