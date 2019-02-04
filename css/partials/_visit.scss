@@ -1,0 +1,14 @@
+section.visit {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   border: 1px solid blue;
+}
+
+section.visit figure {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+}
