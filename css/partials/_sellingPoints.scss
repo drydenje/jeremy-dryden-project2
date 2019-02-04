@@ -1,0 +1,40 @@
+section.sellingPoints {
+   display: flex;
+   padding: 4rem 1rem;
+   span {
+      // padding: 0 40px;
+      // border: 1px solid blue;
+   }
+
+   h4 {
+      display: inline-block;
+   }
+
+   ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin: 1rem;
+
+      li {
+         max-width: 40%;
+         display: flex;
+         
+         &:nth-child(odd) {
+            margin-left: auto;
+         }
+
+         &:nth-child(even) {
+            margin-right: auto;
+         }
+      }
+
+      span + div {
+         width: 80%;
+      }
+
+
+   }
+}

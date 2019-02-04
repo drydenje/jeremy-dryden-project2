@@ -1,0 +1,25 @@
+section.planAhead {
+   display: flex;
+   flex-direction: row;
+   background: $lightLightBlue;
+   // justify-content: space-between;
+   // align-items: center;
+}
+
+section.planAhead {
+   figure.planAhead picture, figure.planAhead figcaption {
+      border: 2px solid brown;
+      width: 100%;
+
+      display: flex;
+      flex-direction: row;
+   }
+
+   figure.newLocations picture, figure.newLocations figcaption{
+      border: 2px solid brown;
+      width: 100%;
+
+      display: flex;
+      flex-direction: row;
+   }
+}

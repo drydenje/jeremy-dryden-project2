@@ -7,6 +7,9 @@ $spruce: #0c5f4c;
 $twilightBlue: #063974;
 $white: #ffffff;
 
+section {
+   border: 1px solid blue;
+}
 
 $fontSerif: 'Playfair Display SC', serif;
 $fontSansSerif: 'Lato', sans-serif;
@@ -148,7 +151,7 @@ input::placeholder, textarea::placeholder {
 
 .wrapper {
    margin: 0 auto;
-   max-width: 1600px;
+   max-width: 1400px;
 }
 
 .currentPage {
@@ -157,4 +160,8 @@ input::placeholder, textarea::placeholder {
 
 .shadow {
    box-shadow: 1rem 1rem 0 0px $greenishCyan;
+}
+
+.shadowLeft {
+   box-shadow: -1rem 1rem 0 0px $greenishCyan;
 }

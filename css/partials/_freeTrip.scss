@@ -4,8 +4,9 @@ section.freeTrip {
    justify-content: center;
    align-items: center;
 
-   picture {
-      // width: 100%;
+   picture img {
+      max-width: 100%;
+      display: inline-block;
    }
 
    .offer {

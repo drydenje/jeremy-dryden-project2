@@ -132,6 +132,9 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+section {
+  border: 1px solid blue; }
+
 html {
   font-size: 125%; }
 
@@ -252,7 +255,7 @@ input::placeholder, textarea::placeholder {
 
 .wrapper {
   margin: 0 auto;
-  max-width: 1600px; }
+  max-width: 1400px; }
 
 .currentPage {
   color: #50e3c2; }
@@ -260,6 +263,10 @@ input::placeholder, textarea::placeholder {
 .shadow {
   -webkit-box-shadow: 1rem 1rem 0 0px #50e3c2;
   box-shadow: 1rem 1rem 0 0px #50e3c2; }
+
+.shadowLeft {
+  -webkit-box-shadow: -1rem 1rem 0 0px #50e3c2;
+  box-shadow: -1rem 1rem 0 0px #50e3c2; }
 
 header {
   height: 40vw;
@@ -388,7 +395,8 @@ section.visit figure {
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  margin: 5rem auto 5rem auto; }
 
 .carousel {
   background: #d2f9f1; }
@@ -411,7 +419,71 @@ section.visit figure {
 
 .carousel img {
   width: 30%;
-  margin: 0 1%; }
+  margin: 4rem 1rem; }
+
+section.sellingPoints {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 4rem 1rem; }
+  section.sellingPoints h4 {
+    display: inline-block; }
+  section.sellingPoints ul {
+    list-style: none;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 1rem; }
+    section.sellingPoints ul li {
+      max-width: 40%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      section.sellingPoints ul li:nth-child(odd) {
+        margin-left: auto; }
+      section.sellingPoints ul li:nth-child(even) {
+        margin-right: auto; }
+    section.sellingPoints ul span + div {
+      width: 80%; }
+
+section.planAhead {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  background: #d2f9f1; }
+
+section.planAhead figure.planAhead picture, section.planAhead figure.planAhead figcaption {
+  border: 2px solid brown;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row; }
+
+section.planAhead figure.newLocations picture, section.planAhead figure.newLocations figcaption {
+  border: 2px solid brown;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row; }
 
 section.freeTrip {
   display: -webkit-box;
@@ -427,6 +499,9 @@ section.freeTrip {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
+  section.freeTrip picture img {
+    max-width: 100%;
+    display: inline-block; }
   section.freeTrip .offer {
     display: -webkit-box;
     display: -ms-flexbox;
