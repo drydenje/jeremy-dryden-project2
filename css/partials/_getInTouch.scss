@@ -1,15 +1,24 @@
+body.contact {
+
+}
+
 main.contact {
    // border: 1px dashed blue;
+
    display: flex;
    flex-direction: row;
    justify-content: center;
    // margin: 2rem;
    margin-bottom: 6rem;
+   position: relative;
 }
 
-.contactForm {
-   width: 60%;
+main.contact section.contactForm {
+   // width: 60%;
+   background: $white;
    padding: 2rem;
+   position: absolute;
+   top:-12vw;
 }
 
 .contactForm form {
@@ -45,7 +54,8 @@ main.contact {
 }
 
 .contactInfo {
-   margin: auto;
+
+   margin: 0;
    ul.socialMediaIcons {
       list-style-type: none;
       padding: 0;
@@ -65,4 +75,25 @@ main.contact {
       list-style-type: none;
       padding: 0;
    }
+}
+
+// Grid positioning ======================
+
+main.contact {
+   display: grid;
+   grid-template-columns: 1fr 12.5fr 5fr 2fr;
+   grid-template-rows: 6fr 1.5fr;
+   grid-template-areas: 
+      ". contactForm socialInfo ."
+      ". . . .";
+}
+
+main.contact section.contactForm {
+   grid-area: contactForm;
+}
+
+main.contact aside.contactInfo {
+   grid-area: socialInfo;
+   justify-self: end;
+   align-self: center;
 }

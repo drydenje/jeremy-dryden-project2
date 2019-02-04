@@ -1,7 +1,26 @@
+section.blogPost {
+   position: absolute;
+   top:-12vw;
+   img {
+      width: 100%;
+   }
+
+   h4 {
+      margin: 0;
+   }
+
+   & > *:not(img) {
+      // border: 1px solid blue;
+      margin: 1rem 1rem 1rem 5rem;
+   }
+}
+
 aside.blogPost {
    // todo: just for testing, change later
-   width: 400px;
-   border: 1px solid blue;
+   // width: 400px;
+   // border: 1px solid blue;
+
+ 
 
    img {
       width: 100%;
@@ -45,11 +64,12 @@ section.comments {
    }
 
    ul * {
-      border: 1px solid blue;
+      // border: 1px solid blue;
    }
    
    ul {
       list-style: none;
+      padding: 0;
    }
 
    li figure {
@@ -57,11 +77,54 @@ section.comments {
 
       img {
          flex-shrink: 0;
-         max-height: 
+         // max-height: 
+         max-height: 80px;
       }
 
       figcaption {
-         flex-shrink: 2;
+         margin-left: 1rem;
+         // flex-shrink: 2;
+      }
+
+      figcaption p.postDate {
+         margin-top: 0;
       }
    }
+
+   section.contactForm img.shadow {
+      // width: 60%;
+      background: $white;
+      // padding: 2rem;
+
+   }
+}
+
+
+// Grid layout
+// Main content
+
+main.blogPost {
+   display: grid;
+   grid-template-columns: 1fr 7fr 2fr 3fr;
+   grid-template-rows: 1fr 3fr 0.5fr 3.5fr 3.5fr auto;
+   grid-template-areas:
+      "post       post        .        ."
+      "post       post        .        sidebar"
+      "post       post        .        sidebar"
+      "post       post        .        sidebar"
+      "post       post        .        ."
+      ".          comments    .        .";
+   position: relative;
+}
+
+section.blogPost {
+   grid-area: post;
+}
+
+aside.blogPost {
+   grid-area: sidebar;
+}
+
+section.comments {
+   grid-area: comments;
 }

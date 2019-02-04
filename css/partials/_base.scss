@@ -35,6 +35,7 @@ h1 {
    font-family: $fontSerif;
    font-weight: $fontWeightBlackItalic;
    font-size: 5.55rem;
+   margin-top: 0;
 }
 
 // Blog, Get in touch
@@ -64,6 +65,7 @@ h4 {
    font-size: 1.75rem;
    line-height: 2.9rem;
    letter-spacing: 0.19rem;
+   margin: 0;
 }
 
 // logo (beachstay small)
@@ -84,7 +86,7 @@ h6 {
    font-size: 1.5rem;
    line-height: 2.9rem;
    letter-spacing: 0.16rem;
-
+   margin: 0;
 }
 
 // buttons

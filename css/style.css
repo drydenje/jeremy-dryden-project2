@@ -145,7 +145,8 @@ body {
 h1 {
   font-family: "Playfair Display SC", serif;
   font-weight: 900;
-  font-size: 5.55rem; }
+  font-size: 5.55rem;
+  margin-top: 0; }
 
 h2 {
   font-family: "Lato", sans-serif;
@@ -167,7 +168,8 @@ h4 {
   font-weight: 700;
   font-size: 1.75rem;
   line-height: 2.9rem;
-  letter-spacing: 0.19rem; }
+  letter-spacing: 0.19rem;
+  margin: 0; }
 
 h5 {
   font-family: "Playfair Display SC", serif;
@@ -182,7 +184,8 @@ h6 {
   font-weight: 700;
   font-size: 1.5rem;
   line-height: 2.9rem;
-  letter-spacing: 0.16rem; }
+  letter-spacing: 0.16rem;
+  margin: 0; }
 
 .button, button {
   font-family: "Playfair Display SC", serif;
@@ -260,8 +263,7 @@ input::placeholder, textarea::placeholder {
   box-shadow: 1rem 1rem 0 0px #50e3c2; }
 
 header {
-  width: 100%;
-  height: 90vh;
+  height: 40vw;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -271,7 +273,6 @@ header.index {
   background-image: url("../assets/homeImage1.jpg"); }
 
 header.contact {
-  height: 35vw;
   background-image: url("../assets/contactImage1.jpg"); }
 
 header.blogPost {
@@ -302,6 +303,66 @@ header ul {
 header li {
   list-style-type: none;
   display: inline-block; }
+
+header.contact {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr minmax(1600px, 3.5fr 8fr 5fr) 2fr;
+  grid-template-columns: 2fr minmax(1600px, 3.5fr 8fr 5fr) 2fr;
+  -ms-grid-rows: auto 2.5fr auto 2fr;
+  grid-template-rows: auto 2.5fr auto 2fr;
+  grid-template-areas: ". navBar navBar navBar ." ". . . . ." ". pageTitle pageTitle pageTitle." ". . . . ."; }
+
+header.contact div.navBar {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-area: navBar; }
+
+header.contact h2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: pageTitle; }
+
+header.index {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr 1fr 4fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr 4fr 1fr;
+  -ms-grid-rows: auto (1fr)[4];
+  grid-template-rows: auto repeat(4, 1fr);
+  grid-template-areas: ". navBar navBar navBar." "glasses glasses glasses . ." "glasses glasses glasses . ." "glasses glasses glasses . ." "glasses glasses glasses . .";
+  position: relative;
+  margin-bottom: 9vw;
+  padding-bottom: 1px; }
+
+header.index div.navBar {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: navBar; }
+
+header.index img.sunglasses {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: glasses;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 9vw; }
+
+header.index div.welcoming {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: 4/3/5/5;
+  z-index: 10; }
+  header.index div.welcoming h3 {
+    margin-bottom: 1.5rem; }
 
 .carousel {
   background: #d2f9f1; }
@@ -345,11 +406,14 @@ main.contact {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin-bottom: 6rem; }
+  margin-bottom: 6rem;
+  position: relative; }
 
-.contactForm {
-  width: 60%;
-  padding: 2rem; }
+main.contact section.contactForm {
+  background: #ffffff;
+  padding: 2rem;
+  position: absolute;
+  top: -12vw; }
 
 .contactForm form {
   display: inline-block;
@@ -375,7 +439,7 @@ main.contact {
     width: 100%; }
 
 .contactInfo {
-  margin: auto; }
+  margin: 0; }
   .contactInfo ul.socialMediaIcons {
     list-style-type: none;
     padding: 0; }
@@ -389,25 +453,60 @@ main.contact {
     list-style-type: none;
     padding: 0; }
 
-aside.blogPost {
-  width: 400px;
-  border: 1px solid blue; }
-  aside.blogPost img {
+main.contact {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 12.5fr 5fr 2fr;
+  grid-template-columns: 1fr 12.5fr 5fr 2fr;
+  -ms-grid-rows: 6fr 1.5fr;
+  grid-template-rows: 6fr 1.5fr;
+  grid-template-areas: ". contactForm socialInfo ." ". . . ."; }
+
+main.contact section.contactForm {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: contactForm; }
+
+main.contact aside.contactInfo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: socialInfo;
+  -ms-grid-column-align: end;
+  justify-self: end;
+  -ms-grid-row-align: center;
+  align-self: center; }
+
+section.blogPost {
+  position: absolute;
+  top: -12vw; }
+  section.blogPost img {
     width: 100%; }
-  aside.blogPost p {
-    margin-bottom: 0; }
-  aside.blogPost a {
-    text-decoration: none; }
-  aside.blogPost h6 {
-    margin: 0.5rem 0;
-    color: #063974; }
-  aside.blogPost ul {
+  section.blogPost h4 {
     margin: 0; }
-  aside.blogPost li {
-    padding-left: 0.5rem;
-    color: #50e3c2; }
-    aside.blogPost li a {
-      text-decoration: none; }
+  section.blogPost > *:not(img) {
+    margin: 1rem 1rem 1rem 5rem; }
+
+aside.blogPost img {
+  width: 100%; }
+
+aside.blogPost p {
+  margin-bottom: 0; }
+
+aside.blogPost a {
+  text-decoration: none; }
+
+aside.blogPost h6 {
+  margin: 0.5rem 0;
+  color: #063974; }
+
+aside.blogPost ul {
+  margin: 0; }
+
+aside.blogPost li {
+  padding-left: 0.5rem;
+  color: #50e3c2; }
+  aside.blogPost li a {
+    text-decoration: none; }
 
 section.comments a {
   text-decoration: none;
@@ -417,11 +516,9 @@ section.comments .postDate {
   color: #063974;
   font-weight: bold; }
 
-section.comments ul * {
-  border: 1px solid blue; }
-
 section.comments ul {
-  list-style: none; }
+  list-style: none;
+  padding: 0; }
 
 section.comments li figure {
   display: -webkit-box;
@@ -429,7 +526,40 @@ section.comments li figure {
   display: flex; }
   section.comments li figure img {
     -ms-flex-negative: 0;
-    flex-shrink: 0; }
+    flex-shrink: 0;
+    max-height: 80px; }
   section.comments li figure figcaption {
-    -ms-flex-negative: 2;
-    flex-shrink: 2; }
+    margin-left: 1rem; }
+  section.comments li figure figcaption p.postDate {
+    margin-top: 0; }
+
+section.comments section.contactForm img.shadow {
+  background: #ffffff; }
+
+main.blogPost {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 7fr 2fr 3fr;
+  grid-template-columns: 1fr 7fr 2fr 3fr;
+  -ms-grid-rows: 1fr 3fr 0.5fr 3.5fr 3.5fr auto;
+  grid-template-rows: 1fr 3fr 0.5fr 3.5fr 3.5fr auto;
+  grid-template-areas: "post       post        .        ." "post       post        .        sidebar" "post       post        .        sidebar" "post       post        .        sidebar" "post       post        .        ." ".          comments    .        .";
+  position: relative; }
+
+section.blogPost {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: post; }
+
+aside.blogPost {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 4;
+  grid-area: sidebar; }
+
+section.comments {
+  -ms-grid-row: 6;
+  -ms-grid-column: 2;
+  grid-area: comments; }

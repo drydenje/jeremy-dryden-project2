@@ -14,30 +14,28 @@
 
 <body>
    <!-- Start of header -->
-   <header class="blogPost">
-      <div class="wrapper ">
-         <div class="navBar">
-            <h5>Beachstays</h5>
-            <nav>
-               <ul>
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">About</a></li>
-                  <li><a href="#" class="currentPage">Blog</a></li>
-                  <li><a href="#">Contact</a></li>
-               </ul>
-            </nav>
-         </div>
-         <h2>Blog</h2>
+   <header class="contact">
+      <div class="navBar">
+         <h5>Beachstays</h5>
+         <nav>
+            <ul>
+               <li><a href="./index.html">Home</a></li>
+               <li><a href="#">About</a></li>
+               <li><a href="./blogPost.html" class="currentPage">Blog</a></li>
+               <li><a href="./contact.html">Contact</a></li>
+            </ul>
+         </nav>
       </div>
+      <h2>Blog</h2>
    </header>
    <!-- End of header -->
 
    <!-- Start of main -->
    <main class="blogPost">
       <!-- Start of post -->
-      <section class="post">
+      <section class="blogPost">
          <img src="./assets/postImage.jpg" class="shadow" alt="A wooden walkway leading up to a beach house, flanked by trees">
-         <h5>Five days of ocean seas</h5>
+         <h4>Five days of ocean seas</h4>
          <p class="postDate">Monday January 21th, 2019 by <a href="#">Bora</a></p>
          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, voluptate. Voluptates beatae, ex
             voluptatem dolorum consequuntur odio consectetur velit aperiam voluptatum expedita obcaecati cumque
@@ -93,6 +91,27 @@
                </figure>
             </li>
          </ul>
+         <ul class="comment">
+            <li>
+               <figure>
+                  <img src="./assets/commentImage2.jpg" alt="A users image">
+                  <figcaption>
+                     <p class="postDate">Wednesday October 10th, 2019 by <a href="#">Olivia</a></p>
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio magni aut, earum mollitia
+                        excepturi vero. Alias consequuntur nemo animi, delectus dolor fugiat deserunt repellat laborum?</p>
+                  </figcaption>
+               </figure>
+            </li>
+         </ul>
+
+         <section class="contactForm">
+            <form action="#">
+               <input type="text" class="name" placeholder="Name">
+               <input type="text" class="email" placeholder="Email address">
+               <textarea name="message" id="" cols="30" rows="10" placeholder="Message"></textarea>
+               <button>Post Comment</button>
+            </form>
+         </section>
       </section>
       <!-- End of comments -->
 

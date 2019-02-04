@@ -1,7 +1,9 @@
 header {
    // border: 1px solid blue;
-   width: 100%;
-   height: 90vh;
+   // width: 100%;
+   // height: 90vh;
+   height: 40vw;
+
 
    background-repeat: no-repeat;
    background-size: cover;
@@ -16,7 +18,6 @@ header.index {
 }
 
 header.contact {
-   height: 35vw;
    background-image: 
       url('../assets/contactImage1.jpg');
 }
@@ -47,3 +48,69 @@ header li {
    list-style-type: none;
    display: inline-block;
 }
+
+// Grid positioning ======================
+// Contact Page, Blog Page
+
+header.contact {
+   display: grid;
+   grid-template-columns: 2fr minmax(1600px, 3.5fr 8fr 5fr) 2fr;
+   grid-template-rows: auto 2.5fr auto 2fr;
+   grid-template-areas: 
+      ". navBar navBar navBar ."
+      ". . . . ."
+      ". pageTitle pageTitle pageTitle."
+      ". . . . .";
+}
+
+header.contact div.navBar {
+   grid-area: navBar;
+}
+
+header.contact h2 {
+   grid-area: pageTitle;
+}
+
+// index page
+header.index {
+   display: grid;
+   grid-template-columns: 1fr 2fr 1fr 4fr 1fr;
+   grid-template-rows: auto repeat(4, 1fr);
+   grid-template-areas: 
+      ". navBar navBar navBar."
+      "glasses glasses glasses . ."
+      "glasses glasses glasses . ."
+      "glasses glasses glasses . ."
+      "glasses glasses glasses . .";
+   position: relative;
+   margin-bottom: 9vw;
+   padding-bottom: 1px;
+}
+
+header.index div.navBar {
+   grid-area: navBar;
+}
+
+header.index img.sunglasses {
+   grid-area: glasses;
+   width: 100%;
+   height: 100%;
+   // object-fit: contain;
+   position: absolute;
+   top: 9vw;
+}
+
+header.index div.welcoming {
+   // border: 1px solid blue;
+   grid-area: 4/3/5/5;
+   z-index: 10;
+
+   h3 {
+      margin-bottom: 1.5rem;
+   }
+}
+
+
+
+
+
