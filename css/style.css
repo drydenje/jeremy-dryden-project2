@@ -132,9 +132,6 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-section {
-  border: 1px solid blue; }
-
 html {
   font-size: 125%; }
 
@@ -379,8 +376,7 @@ section.visit {
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center;
-  border: 1px solid blue; }
+  align-items: center; }
 
 section.visit figure {
   display: -webkit-box;
@@ -397,6 +393,9 @@ section.visit figure {
   -ms-flex-align: center;
   align-items: center;
   margin: 5rem auto 5rem auto; }
+
+section.visit figcaption {
+  padding: 2rem; }
 
 .carousel {
   background: #d2f9f1; }
@@ -461,31 +460,45 @@ section.planAhead {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   background: #d2f9f1; }
+  section.planAhead figure {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative; }
+  section.planAhead figure.planAhead img, section.planAhead figure.planAhead figcaption {
+    width: 45%; }
+  section.planAhead figure.newLocations img, section.planAhead figure.newLocations figcaption {
+    width: 45%;
+    text-align: right; }
+  section.planAhead figure img:nth-child(odd) {
+    position: relative;
+    top: -2vw; }
+  section.planAhead figure img:nth-child(even) {
+    position: relative;
+    top: 2vw; }
+  section.planAhead p {
+    margin-top: 0.5rem; }
 
-section.planAhead figure.planAhead picture, section.planAhead figure.planAhead figcaption {
-  border: 2px solid brown;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row; }
+section.freeTrip picture {
+  width: 100vw; }
 
-section.planAhead figure.newLocations picture, section.planAhead figure.newLocations figcaption {
-  border: 2px solid brown;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row; }
+section.freeTrip img {
+  width: 100%; }
 
-section.freeTrip {
+section.freeTrip .offer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -498,26 +511,12 @@ section.freeTrip {
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
-  section.freeTrip picture img {
-    max-width: 100%;
-    display: inline-block; }
-  section.freeTrip .offer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    max-width: 80%;
-    margin: 2rem; }
+  align-items: center;
+  margin: 2rem; }
+
+section.freeTrip .offer p {
+  width: 80%;
+  text-align: center; }
 
 footer {
   background: #2c2c2c; }

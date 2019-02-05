@@ -1,12 +1,17 @@
 section.freeTrip {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
+   // display: flex;
+   // flex-direction: column;
+   // justify-content: center;
+   // align-items: center;
 
-   picture img {
-      max-width: 100%;
-      display: inline-block;
+   picture {
+      width: 100vw;
+   }
+   
+   img {
+      // max-width: 100%;
+      width: 100%;
+      // display: inline-block;
    }
 
    .offer {
@@ -15,7 +20,12 @@ section.freeTrip {
       justify-content: center;
       align-items: center;
 
-      max-width: 80%;
+      // max-width: 80%;
       margin: 2rem;
+   }
+
+   .offer p {
+      width: 80%;
+      text-align: center;
    }
 }
