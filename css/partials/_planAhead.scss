@@ -4,26 +4,25 @@ section.planAhead {
    flex-wrap: wrap;
    background: $lightLightBlue;
 
+   a {
+      margin-bottom: 2rem;
+   }
+
    figure {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
       position: relative;
-
    }
+
    figure.planAhead img, figure.planAhead figcaption {
       width: 45%;
-
-      // display: flex;
-      // flex-direction: row;
    }
 
    figure.newLocations img, figure.newLocations figcaption{
       width: 45%;
       text-align: right;
-      // display: flex;
-      // flex-direction: row;
    }
 
    figure img:nth-child(odd) {
@@ -38,5 +37,47 @@ section.planAhead {
 
    p {
       margin-top: 0.5rem;
+   }
+}
+
+
+@media(max-width: 1200px) {
+   section.planAhead {
+      flex-direction: column;
+      flex-wrap: wrap;
+
+      figure.planAhead , figure.newLocations {
+         flex-direction: column;
+         flex-wrap: nowrap;
+      }
+
+      figure.planAhead img,
+      figure.newLocations img {
+         width: 60%;
+      }
+
+      figure.planAhead figcaption,
+      figure.newLocations figcaption {
+         margin: 1vw;
+         width: 80%;
+         text-align: left;
+      }
+
+      figure.newLocations figcaption {
+         order: 1;
+
+         h4 {
+            margin: 5vw 0 auto 0;
+         }
+      }
+
+   }
+}
+
+@media(max-width: 800px) {
+   section.planAhead {
+      figure.planAhead img, figure.newLocations img {
+         width: 80%;
+      }
    }
 }

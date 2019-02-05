@@ -334,10 +334,13 @@ header.contact h2 {
     grid-template-columns: 20px 1fr 20px;
     -ms-grid-rows: auto 3fr 1fr;
     grid-template-rows: auto 3fr 1fr;
-    grid-template-areas: "navBar navBar navBar" "pageTitle pageTitle pageTitle"; }
+    grid-template-areas: "navBar navBar navBar" "pageTitle pageTitle pageTitle";
+    position: relative; }
     header.contact h2 {
       font-size: 3.35rem;
-      margin: 1vw; }
+      margin: 1vw;
+      position: absolute;
+      top: 0vw; }
   header.contact div.navBar {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
@@ -446,9 +449,6 @@ section.visit figcaption {
   margin: 4rem 1rem; }
 
 section.sellingPoints {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   padding: 4rem 1rem; }
   section.sellingPoints h4 {
     display: inline-block; }
@@ -466,7 +466,7 @@ section.sellingPoints {
     flex-wrap: wrap;
     margin: 1rem; }
     section.sellingPoints ul li {
-      max-width: 40%;
+      width: 40%;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex; }
@@ -476,6 +476,22 @@ section.sellingPoints {
         margin-right: auto; }
     section.sellingPoints ul span + div {
       width: 80%; }
+
+@media (max-width: 1200px) {
+  section.sellingPoints ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    section.sellingPoints ul li {
+      width: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      section.sellingPoints ul li:nth-child(odd) {
+        margin-left: 0; }
+      section.sellingPoints ul li:nth-child(even) {
+        margin-right: 0; } }
 
 section.planAhead {
   display: -webkit-box;
@@ -488,6 +504,8 @@ section.planAhead {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   background: #d2f9f1; }
+  section.planAhead a {
+    margin-bottom: 2rem; }
   section.planAhead figure {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -517,11 +535,48 @@ section.planAhead {
   section.planAhead p {
     margin-top: 0.5rem; }
 
+@media (max-width: 1200px) {
+  section.planAhead {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    section.planAhead figure.planAhead, section.planAhead figure.newLocations {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap; }
+    section.planAhead figure.planAhead img,
+    section.planAhead figure.newLocations img {
+      width: 60%; }
+    section.planAhead figure.planAhead figcaption,
+    section.planAhead figure.newLocations figcaption {
+      margin: 1vw;
+      width: 80%;
+      text-align: left; }
+    section.planAhead figure.newLocations figcaption {
+      -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+      order: 1; }
+      section.planAhead figure.newLocations figcaption h4 {
+        margin: 5vw 0 auto 0; } }
+
+@media (max-width: 800px) {
+  section.planAhead figure.planAhead img, section.planAhead figure.newLocations img {
+    width: 80%; } }
+
 section.freeTrip picture {
   width: 100vw; }
 
 section.freeTrip img {
-  width: 100%; }
+  width: 100%;
+  background-position: center;
+  -o-object-fit: none;
+  object-fit: none; }
 
 section.freeTrip .offer {
   display: -webkit-box;
@@ -542,6 +597,18 @@ section.freeTrip .offer {
 section.freeTrip .offer p {
   width: 80%;
   text-align: center; }
+
+@media (max-width: 800px) {
+  section.freeTrip .offer {
+    margin: 0 auto 2rem auto; }
+    section.freeTrip .offer h4 {
+      font-size: 1.65rem;
+      max-width: 80%; }
+    section.freeTrip .offer p {
+      text-align: left;
+      -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+      hyphens: auto; } }
 
 footer {
   background: #2c2c2c; }
@@ -684,7 +751,7 @@ main.contact aside.contactInfo {
     -ms-grid-column-span: 3; } }
 
 section.blogPost {
-  position: absolute;
+  position: relative;
   top: -12vw; }
   section.blogPost img {
     width: 100%; }
@@ -789,13 +856,10 @@ section.comments {
     main.blogPost img {
       position: static; }
     main.blogPost section {
-      max-width: 90%;
-      background: #ffffff; }
+      max-width: 90%; }
     main.blogPost aside {
       background: #fafffe;
       padding: 2%; }
-  section.blogPost {
-    position: static; }
-    section.blogPost img {
-      max-width: 80%;
-      position: static; } }
+  section.blogPost img {
+    max-width: 80%;
+    position: static; } }

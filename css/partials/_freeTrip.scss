@@ -11,7 +11,8 @@ section.freeTrip {
    img {
       // max-width: 100%;
       width: 100%;
-      // display: inline-block;
+      background-position: center;
+      object-fit: none;
    }
 
    .offer {
@@ -24,8 +25,27 @@ section.freeTrip {
       margin: 6rem auto 6rem auto;
    }
 
-   .offer p {
+   .offer  {
+      p {
       width: 80%;
       text-align: center;
+      }
+   }
+}
+
+@media(max-width: 800px) {
+   section.freeTrip {
+      .offer { 
+         margin: 0 auto 2rem auto;
+         h4 {
+            font-size: 1.65rem;
+            max-width: 80%;
+         }
+
+         p {
+            text-align: left;
+            hyphens: auto;
+         }
+      }
    }
 }

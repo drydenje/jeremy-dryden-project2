@@ -78,10 +78,13 @@ header.contact h2 {
       grid-template-areas:
          "navBar navBar navBar"
          "pageTitle pageTitle pageTitle";
+      position: relative;
 
       h2 {
          font-size: 3.35rem;
          margin: 1vw;
+         position: absolute;
+         top: 0vw;
       }
    }
 }
@@ -101,6 +104,8 @@ header.index {
    margin-bottom: 9vw;
    padding-bottom: 1px;
 }
+
+
 
 header.index div.navBar {
    grid-area: navBar;
