@@ -122,3 +122,40 @@ aside.blogPost {
 section.comments {
    grid-area: comments;
 }
+
+@media(max-width: 1000px) {
+   main.blogPost {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+
+      img {
+         position: static;
+      }
+
+      section {
+         max-width: 90%;
+         background: $white;
+      }
+
+      aside {
+         background: $iceBlue;
+         // display: flex;
+         // flex-direction: column;
+         // justify-content: center;
+         // align-items: center;
+         padding: 2%;
+      }
+   }
+
+   section.blogPost {
+      position: static;
+
+      img{ 
+         max-width: 80%;
+         position: static;
+      }
+   }
+}

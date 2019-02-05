@@ -4,7 +4,7 @@ body.contact {
 
 main.contact {
    // border: 1px dashed blue;
-   height: 40vw;
+   min-height: 40vw;
    display: flex;
    flex-direction: row;
    justify-content: center;
@@ -17,7 +17,7 @@ main.contact section.contactForm {
    // width: 60%;
    background: $white;
    padding: 2rem;
-   position: absolute;
+   position: relative;
    top:-12vw;
 }
 
@@ -83,10 +83,10 @@ main.contact section.contactForm {
 main.contact {
    display: grid;
    grid-template-columns: 1fr 12.5fr 5fr 2fr;
-   grid-template-rows: 6fr 1.5fr;
+   grid-template-rows: 6fr auto;
    grid-template-areas: 
       ". contactForm socialInfo ."
-      ". . . .";
+      ". extra extra .";
 }
 
 main.contact section.contactForm {
@@ -97,4 +97,52 @@ main.contact aside.contactInfo {
    grid-area: socialInfo;
    justify-self: end;
    align-self: center;
+}
+
+@media(max-width: 1200px) {
+   main.contact {
+      grid-template-columns: 1fr 10fr 1fr;
+      grid-template-columns: 6fr auto;
+      grid-template-areas:
+         ". contactForm ."
+         ". extra ."
+         "nav nav nav"
+   }
+
+   main.contact section.contactForm {
+      // grid-area: 1/2/2/4;
+      box-shadow: none;
+      top: 0;
+      form input {
+         width: 100%;
+      }
+   }
+
+   main.contact aside.contactInfo {
+      grid-area: extra;
+      justify-self: center;
+      align-self: center;
+      text-align: center;
+   }
+
+   ul.mailingAddress {
+      text-align: center;
+   }
+
+   ul.socialMediaIcons {
+      display: flex;
+
+      i {
+         font-size: 2rem;
+         margin: auto 0.3rem auto 0.3rem;
+      }
+
+      li {
+         margin: auto;
+      }
+   }
+
+   footer.contact {
+      grid-area: nav;
+   }
 }
