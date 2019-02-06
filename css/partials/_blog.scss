@@ -158,6 +158,11 @@ section.comments {
          margin-top: 0;
       }
    }
+   section.contactForm {
+      input.name, input.email {
+         width: 100%;
+      }
+   }
 }
 
 @media(max-width: 800px) {
@@ -174,6 +179,8 @@ section.comments {
       }
    }
 
+   
+
    section.comments li figure {
       flex-direction: column;
    }
@@ -187,5 +194,6 @@ section.comments {
 @media(max-width: 600px) {
    section.blogPost {
       position: static;
-   }  
+   } 
+   
 }

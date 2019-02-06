@@ -988,7 +988,9 @@ section.comments {
     float: left;
     margin-right: 50px; }
   aside.blogPost h6 {
-    margin-top: 0; } }
+    margin-top: 0; }
+  section.contactForm input.name, section.contactForm input.email {
+    width: 100%; } }
 
 @media (max-width: 800px) {
   aside.blogPost {
