@@ -10,7 +10,6 @@ section.blogPost {
    }
 
    & > *:not(img) {
-      // border: 1px solid blue;
       margin: 1rem 1rem 1rem 5rem;
    }
 }
@@ -56,10 +55,6 @@ section.comments {
       color: $twilightBlue;
       font-weight: bold;
    }
-
-   ul * {
-      // border: 1px solid blue;
-   }
    
    ul {
       list-style: none;
@@ -71,13 +66,11 @@ section.comments {
 
       img {
          flex-shrink: 0;
-         // max-height: 
          max-height: 80px;
       }
 
       figcaption {
          margin-left: 1rem;
-         // flex-shrink: 2;
       }
 
       figcaption p.postDate {
@@ -86,10 +79,7 @@ section.comments {
    }
 
    section.contactForm img.shadow {
-      // width: 60%;
       background: $white;
-      // padding: 2rem;
-
    }
 }
 
@@ -137,22 +127,15 @@ section.comments {
 
       section {
          max-width: 90%;
-         // background: $white;
       }
 
       aside {
          background: $iceBlue;
-         // display: flex;
-         // flex-direction: column;
-         // justify-content: center;
-         // align-items: center;
          padding: 2%;
       }
    }
 
    section.blogPost {
-      // position: static;
-
       img{ 
          max-width: 80%;
          position: static;

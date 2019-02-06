@@ -1,15 +1,9 @@
 section.freeTrip {
-   // display: flex;
-   // flex-direction: column;
-   // justify-content: center;
-   // align-items: center;
-
    picture {
       width: 100vw;
    }
    
    img {
-      // max-width: 100%;
       width: 100%;
       background-position: center;
       object-fit: none;
@@ -21,7 +15,6 @@ section.freeTrip {
       justify-content: center;
       align-items: center;
 
-      // max-width: 80%;
       margin: 6rem auto 6rem auto;
    }
 
