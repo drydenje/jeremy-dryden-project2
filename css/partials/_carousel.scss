@@ -1,6 +1,5 @@
 .carousel {
    background: $lightLightBlue;
-   // padding: 1px;
 }
 
 .carousel .wrapper {
@@ -13,11 +12,19 @@
 
 .carousel img {
    width: 30%;
-   // border: 1px solid blue;
-   // height: 100%;
-   // object-fit: cover;
-   // height: 25%;
-   // width: auto;
-   // height: auto;
    margin: 4rem 1rem;
+}
+
+@media(max-width: 400px) {
+   section.carousel {
+      .wrapper {
+
+         flex-direction: column;
+      }
+
+      img {
+         width: 90%;
+         margin: 1rem 2rem;
+      }
+   }
 }

@@ -10,6 +10,14 @@ header {
    background-position: center;
    
    padding: 1px;
+
+   h1 {
+      color: $twilightBlue;
+   }
+
+   h3 {
+      color: $spruce;
+   }
 }
 
 header.index {
@@ -92,7 +100,7 @@ header.contact h2 {
 // index page
 header.index {
    display: grid;
-   grid-template-columns: 1fr 2fr 1fr 4fr 1fr;
+   grid-template-columns: 1fr 1fr 1fr 4fr 1fr;
    grid-template-rows: auto repeat(4, 1fr);
    grid-template-areas: 
       ". navBar navBar navBar."
@@ -130,6 +138,53 @@ header.index div.welcoming {
    }
 }
 
+@media(max-width: 1100px) {
+   header.index {
+      div.welcoming {
+         grid-area: 4/2/5/5;
+      }
+   }
+}
+
+@media(max-width: 1000px) {
+   header.index {
+      div.welcoming {
+         grid-area: 4/1/5/-1;
+         // display: none;
+      }
+
+      div.navBar {
+         display: none;
+      }
+
+      img {
+         display: none;
+      }
+   }
+}
+
+@media(max-width: 1000px) {
+   header.index {
+      h1 {
+         font-size: 4.55rem;
+      }
+      h3 {
+         font-size: 2.9rem;
+      }
+   }
+}
+
+@media(max-width: 650px) {
+   header.index {
+      h1 {
+         font-size: 1.9rem;
+      }
+      div.welcoming h3 {
+         font-size: 1.5rem;
+         margin-bottom: -0.3rem;
+      }
+   }
+}
 
 
 

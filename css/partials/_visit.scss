@@ -18,3 +18,15 @@ section.visit  {
       padding: 2rem;
    }
 }
+
+@media(max-width: 800px) {
+   section.visit {
+      .wrapper{
+         flex-direction: column;
+
+         picture {
+            order: -1;
+         }
+      }
+   }
+}
