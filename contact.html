@@ -13,6 +13,9 @@
 </head>
 
 <body class="contact">
+   <!-- Skip link -->
+   <a href="#maincontent" class="skip-link">Skip to main content.</a>
+
    <!-- Start of header -->
    <header class="contact wrapper">
       <div class="navBar">
@@ -20,9 +23,14 @@
          <nav>
             <ul>
                <li><a href="./index.html">Home</a></li>
-               <li><a href="#">About</a></li>
+               <li><a href="./index.html#about">About</a></li>
                <li><a href="./blogPost.html">Blog</a></li>
                <li><a href="./contact.html" class="currentPage">Contact</a></li>
+            </ul>
+            <ul class="hamburger">
+               <li>
+                  <a href=""><i class="fas fa-bars"></i></a></i>
+               </li>
             </ul>
          </nav>
       </div>
@@ -31,13 +39,19 @@
    <!-- End of header -->
 
    <!-- Start of main -->
-   <main class="contact wrapper">
+   <main class="contact wrapper" id="maincontent">
       <!-- Start of contactForm -->
       <section class="contactForm shadow">
          <form action="#">
-            <input type="text" class="name" placeholder="Name">
-            <input type="text" class="email" placeholder="Email address">
-            <textarea name="message" id="" cols="30" rows="10" placeholder="Message"></textarea>
+            <label for="name" class="visuallyHidden">Your name:</label>
+            <input type="text" class="name" placeholder="Name" id="name">
+
+            <label for="email" class="visuallyHidden">Your email:</label>
+            <input type="text" class="email" placeholder="Email address" id="email">
+
+            <label for="message" class="visuallyHidden">Message:</label>
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+
             <button>Submit</button>
          </form>
       </section>

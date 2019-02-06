@@ -136,9 +136,56 @@ section.comments {
    }
 
    section.blogPost {
+      h4, p {
+         margin: 20px auto;
+      }
+
       img{ 
-         max-width: 80%;
+         margin: 2.5%;
+         width: 95%;
          position: static;
       }
    }
+
+   aside.blogPost {
+      img {
+         width: auto;
+         float: left;
+         margin-right: 50px;
+      }
+
+      h6 {
+         margin-top: 0;
+      }
+   }
+}
+
+@media(max-width: 800px) {
+   aside.blogPost {
+      display: flex;
+      flex-direction: column;
+      img {
+         width: auto;
+         align-self: center;
+         margin: 0;
+         height: 300px;
+         object-fit: none;
+         width: max-content;
+      }
+   }
+
+   section.comments li figure {
+      flex-direction: column;
+   }
+
+   li figure img {
+      align-self: center;
+      width: 90px;
+   }
+}
+
+@media(max-width: 600px) {
+   section.blogPost {
+      position: static;
+   }  
 }

@@ -1,7 +1,4 @@
 header {
-   // border: 1px solid blue;
-   // width: 100%;
-   // height: 90vh;
    height: 40vw;
    max-height: 1000px;
 
@@ -98,7 +95,19 @@ header.contact h2 {
          position: absolute;
          top: 0vw;
       }
+
+      div.navBar nav ul:not(.hamburger) {
+         display: none;
+      }
+
+      ul.hamburger {
+         display: inline-block;
+      }
    }
+}
+
+@media(max-width: 600px) {
+
 }
 
 // index page
@@ -117,8 +126,6 @@ header.index {
    padding-bottom: 1px;
 }
 
-
-
 header.index div.navBar {
    grid-area: navBar;
 }
@@ -127,13 +134,11 @@ header.index img.sunglasses {
    grid-area: glasses;
    width: 100%;
    height: 100%;
-   // object-fit: contain;
    position: absolute;
    top: 9vw;
 }
 
 header.index div.welcoming {
-   // border: 1px solid blue;
    grid-area: 4/3/5/5;
    z-index: 10;
 

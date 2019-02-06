@@ -13,6 +13,9 @@
 </head>
 
 <body>
+   <!-- Skip link -->
+   <a href="#maincontent" class="skip-link">Skip to main content.</a>
+
    <!-- Start of header -->
    <header class="contact">
       <div class="navBar">
@@ -20,9 +23,14 @@
          <nav>
             <ul>
                <li><a href="./index.html">Home</a></li>
-               <li><a href="#">About</a></li>
+               <li><a href="./index.html#about">About</a></li>
                <li><a href="./blogPost.html" class="currentPage">Blog</a></li>
                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+            <ul class="hamburger">
+               <li>
+                  <a href=""><i class="fas fa-bars"></i></a></i>
+               </li>
             </ul>
          </nav>
       </div>
@@ -31,7 +39,7 @@
    <!-- End of header -->
 
    <!-- Start of main -->
-   <main class="blogPost">
+   <main class="blogPost" id="maincontent">
       <!-- Start of post -->
       <section class="blogPost">
          <img src="./assets/postImage.jpg" class="shadow" alt="A wooden walkway leading up to a beach house, flanked by trees">
@@ -106,10 +114,16 @@
 
          <section class="contactForm">
             <form action="#">
-               <input type="text" class="name" placeholder="Name">
-               <input type="text" class="email" placeholder="Email address">
-               <textarea name="message" id="" cols="30" rows="10" placeholder="Message"></textarea>
-               <button>Post Comment</button>
+               <label for="name" class="visuallyHidden">Your name:</label>
+               <input type="text" class="name" placeholder="Name" id="name">
+
+               <label for="email" class="visuallyHidden">Your email:</label>
+               <input type="text" class="email" placeholder="Email address" id="email">
+
+               <label for="message" class="visuallyHidden">Message:</label>
+               <textarea name="message" cols="30" rows="10" placeholder="Message" id="message"></textarea>
+
+               <button type="submit">Post Comment</button>
             </form>
          </section>
       </section>
