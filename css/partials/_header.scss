@@ -106,9 +106,7 @@ header.contact h2 {
    }
 }
 
-@media(max-width: 600px) {
 
-}
 
 // index page
 header.index {
@@ -195,8 +193,14 @@ header.index div.welcoming {
       }
    }
 
+   header.contact {
+      h2 {
+         font-size: 1.5rem;
+      }
+   }
+
    .navBar h5 {
-      font-size: 0.7rem;
+      font-size: 1rem;
    }
 }
 
