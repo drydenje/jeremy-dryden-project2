@@ -83,7 +83,7 @@ main.contact section.contactForm {
 main.contact {
    display: grid;
    grid-template-columns: 1fr 12.5fr 5fr 2fr;
-   grid-template-rows: 6fr auto;
+   grid-template-rows: auto auto;
    grid-template-areas: 
       ". contactForm socialInfo ."
       ". extra extra .";
